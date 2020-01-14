@@ -45,6 +45,11 @@ class TianyanchaAppletsSpider(scrapy.Spider):
             'custom.pipelines.MysqlTwistedPipeline': 340,
         },
 
+        "SCHEDULER": "scrapy_redis.scheduler.Scheduler",
+        "DUPEFILTER_CLASS": "scrapy_redis.dupefilter.RFPDupeFilter",
+        "SCHEDULER_QUEUE_CLASS": "scrapy_redis.queue.SpiderPriorityQueue",
+        "SCHEDULER_PERSIST": True,
+
         "REDIRECT_ENABLED": False,
         "RETRY_ENABLED": True,
         "RETRY_TIMES": '9',
