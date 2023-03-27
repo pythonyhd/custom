@@ -1,4 +1,4 @@
-redis==3.3.6
+redis==4.5.3
 Scrapy==1.7.3
 scrapy-redis==0.6.8
 requests==2.22.0
